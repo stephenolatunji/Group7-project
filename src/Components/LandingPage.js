@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter, Route } from 'react-router-dom';
 import {Container, Button, Grid, Card, Divider, Form, Input} from 'semantic-ui-react';
 import User from '../Assets/Phone.jpeg';
 import HomeIcon from '@material-ui/icons/Home';
@@ -8,6 +9,8 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import PhoneIcon from '@material-ui/icons/Phone';
+import Signup from './Signup';
+import Signin from './Signin';
 
 
 const LandingPage = () => {
@@ -17,16 +20,26 @@ const LandingPage = () => {
             textAlign: 'Center'
         }}>
             <div>
+                <BrowserRouter>
+                
                 <ul style={{ display: 'flex', justifyContent: 'space-around', listStyle: 'none' }}>
+                   {/* <Route exact path ="/" component ={logo}/> */}
                     <li>Logo</li>
                     <li>Home</li>
                     <li>About</li>
                     <li>History</li>
                     <li>Mission</li>
                     <li>Contact</li>
-                    <Button inverted color='brown'>Log In</Button>
+                    {/* link-to signup button  */}
+                    {/* <Route exact path ="/Signin"> */}
+    {/* <Button inverted color='brown'>{Signin}</Button> */}
+                    {/* </Route> */}
+                    <Button inverted color='brown'>
+                         <Route exact path ="/Signin" component={Signin} />
+                    </Button>
                     <Button color='blue'>Sign Up</Button>
                 </ul>
+                </BrowserRouter>
             </div>
             <Container fluid style={{
             backgroundImage: `url(${User})`,
