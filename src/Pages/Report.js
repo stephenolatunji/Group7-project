@@ -15,7 +15,7 @@ const Report = () => {
                             I am:
                             <input type='radio' />
                             <label>The Victim</label>
-                            <div className='ui form'>
+                            <div className='ui form' id='form-section'>
                                 <div className=' field'>
                                     <label>FirstName</label>
                                     <input placeholder='First name' />
@@ -45,20 +45,20 @@ const Report = () => {
             </div>
             <div className='ui divider' />
             <h3>Incident Description</h3>
-            <div className='ui form'>
+            <div className='ui form' id='form-section'>
                 <div className='required field'>
                     <label>What type of incident are you reporting ?</label>
                     <select>
-                        <option value="male">Fire Outbreak</option>
-                        <option value="female">Rape</option>
-                        <option value="female">Assault</option>
-                        <option value="female">Robbery</option>
-                        <option value="female">Theft</option>
-                        <option value="female">Flood</option>
-                        <option value="female">Car Accident</option>
-                        <option value="female">Vandalism</option>
-                        <option value="female">Homicide</option>
-                        <option value="female">Others</option>
+                        <option>Fire Outbreak</option>
+                        <option>Rape</option>
+                        <option>Assault</option>
+                        <option>Robbery</option>
+                        <option>Theft</option>
+                        <option>Flood</option>
+                        <option>Car Accident</option>
+                        <option>Vandalism</option>
+                        <option>Homicide</option>
+                        <option>Others</option>
                     </select>
                 </div>
                 <div className='required field'>

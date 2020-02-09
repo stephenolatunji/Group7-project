@@ -13,7 +13,7 @@ const Dashboard = () => {
                 <div className='row'>
                     <div className='twelve wide column' id='board'>
                         <button className='ui primary button'>Create Accident Report</button>
-                        <table className='ui celled striped table'>
+                        <table className='ui striped table'>
                             <thead class="">
                                 <tr class=""><th colspan="7" class="">Recent Reports</th></tr>
                             </thead>
@@ -79,7 +79,7 @@ const Dashboard = () => {
                         </table>
                     </div>
                     <div className='four wide column' id='card-container'>
-                        <strong>Upcoming Events</strong>
+                        <p><strong>Upcoming Events</strong></p>
                         <div>
                             <div className='ui card' id='card'>
                                 <div className='content'>
