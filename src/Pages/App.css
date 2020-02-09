@@ -1,0 +1,34 @@
+
+#segment{
+    padding: 30px;
+    margin: 10px 20px;
+}
+#board{
+    text-align: center;
+}
+
+#board > button {
+    margin-top: 40px;
+}
+#board > table {
+    width: 85%;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+#dashboard{
+    margin-left: 140px;
+    background-color: #eee;
+}
+#menu-bar{
+    margin-top: 0;
+    padding: 20px;
+}
+
+#card-container{
+    text-align: center;
+}
+
+#card{
+    margin-right: 20px;
+}

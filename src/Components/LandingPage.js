@@ -14,7 +14,7 @@ const LandingPage = () => {
     return(
         <Container fluid style={{
             marginTop: 90,
-            textAlign: 'Center'
+            textAlign: 'Center',
         }}>
             <div>
                 <ul style={{ display: 'flex', justifyContent: 'space-around', listStyle: 'none' }}>
@@ -34,15 +34,17 @@ const LandingPage = () => {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             padding: '15% 0',
-            textAlign: 'center'
+            textAlign: 'center',
+            color: 'white'
             }}>
-                <p>Have you witnessed or been a victim of an accident? Please report!</p>
+                <h3>Have you witnessed or been a victim of an accident? <br />Please report!</h3>
                 <Button color='orange'>Report Incident</Button>
             </Container>
             <h3>What you can report</h3>
             <Grid column={4} centered
             style={{
-                padding: 20
+                padding: 20,
+                justifyContent: 'space-around' 
             }}>
                 <Grid.Row>
                     <Grid.Column>
@@ -138,10 +140,10 @@ const LandingPage = () => {
                 <Card.Group centered
                     style={{
                         color: 'white',
-                        padding: 16
+                        padding: 20
                     }}>
                     <Card style={{
-                        backgroundColor: 'orange',
+                        backgroundColor: '#e70',
                         padding: 8
                     }}>
                         <p>More than</p>
@@ -149,7 +151,7 @@ const LandingPage = () => {
                         <p>arrests made</p>
                     </Card>
                     <Card style={{
-                        backgroundColor: 'orange',
+                        backgroundColor: '#e70',
                         padding: 8
                     }}>
                         <p>On an average</p>
@@ -157,7 +159,7 @@ const LandingPage = () => {
                         <p>people are arrested daily</p>
                     </Card>
                     <Card style={{
-                        backgroundColor: 'orange',
+                        backgroundColor: '#e70',
                         padding: 8
                     }}>
                         <p>Saved</p>
@@ -167,25 +169,26 @@ const LandingPage = () => {
                 </Card.Group>
                 <Divider />
                 <h2><strong>What our users are saying</strong></h2>
+                
             </Container>
             <Container fluid
             style={{
                 backgroundColor: '#eee',
                 padding: 20,
                 display: 'flex',
-
+                justifyContent: 'space-between'
             }}>
                 <HomeIcon />
-                <Form centered>
+                <Form>
                     <Form.Field inline>
                         <label>Latest News</label>
-                        <Input />
+                        <Input style={{ margin: '0 8px'}}/>
                         <Button color='blue'>Subscribe</Button>
                     </Form.Field>
                 </Form>
             </Container>
             <Container fluid style={{
-                backgroundColor: 'blue',
+                backgroundColor: '#06a',
                 color: 'white',
                 padding: 10
             }}>
