@@ -1,0 +1,70 @@
+
+#segment{
+    padding: 30px;
+    margin: 10px 20px;
+}
+#board{
+    text-align: center;
+}
+
+#board > button {
+    margin-top: 40px;
+}
+#board > table {
+    width: 85%;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+#dashboard{
+    margin-left: 140px;
+    background-color: #eee;
+}
+#menu-bar{
+    margin-top: 0;
+    padding: 20px;
+}
+
+#card{
+    margin-right: 20px;
+}
+
+#form-section{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.all-reports-table {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.app ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.app li{
+    display: inline-block;
+    margin: 20px;
+}
+
+.app a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.app a:hover,
+.app a:active{
+    color: darkorange;
+}
+
+#user-page{
+    margin-top: 70px;
+}
