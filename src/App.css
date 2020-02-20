@@ -1,0 +1,42 @@
+.tab{
+top: 261px;
+left: 245px;
+width: 1550px;
+height: 79px;
+background: #1762D5 0% 0% no-repeat padding-box;
+border-radius: 4px 4px 0px 0px;
+opacity: 1;
+    
+}
+.incident{
+padding-top: 167px;
+padding-left: 100px;
+padding-top: 20px;
+width: 312px;
+height: 45px;
+text-align: left;
+font: SemiBold 32px/30px Poppins;
+letter-spacing: 0;
+color: #313131;
+opacity: 1;
+}
+th{
+    top: 287px;
+left: 292px;
+width: 137px;
+height: 28px;
+text-align: right;
+font: SemiBold 20px/30px Poppins;
+letter-spacing: 0;
+color: #F1F3F6;
+opacity: 1;
+}
+tbody{
+    top: 340px;
+left: 245px;
+width: 1549px;
+height: 104px;
+background: whitesmoke 0% 0% no-repeat padding-box;
+box-shadow: 1px 1px 2px #00000005;
+opacity: 1;
+}

@@ -6,11 +6,13 @@ export default class CreateUser extends Component {
     super(props);
 
     this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
       username: "",
+      email: "",
       password: ""
     };
   }
@@ -18,6 +20,12 @@ export default class CreateUser extends Component {
   onChangeUsername(e) {
     this.setState({
       username: e.target.value
+    });
+  }
+
+  onChangeEmail(e) {
+    this.setState({
+      email: e.target.value
     });
   }
 
@@ -32,17 +40,19 @@ export default class CreateUser extends Component {
 
     const user = {
       username: this.state.username,
+      email: this.state.email,
       password: this.state.password
     };
 
     console.log(user);
 
-    axios.post('http://localhost:5000/api/login', user)
+    axios.post('http://localhost:5000/users/add', user)
         .then(res => console.log(res.data));
 
     // setting the broswer to blink after a submit
     this.setState({
       username: "",
+      email:"",
       password:""
     });
   }
@@ -56,7 +66,7 @@ export default class CreateUser extends Component {
         and our <span>Privacy policy</span>
       </p>
       <div>
-        <p>Sign In</p>
+        <p>Sign Up</p>
         <button class="ui primary button">GOOGLE</button>
         <button class="ui primary button">FACEBOOK</button>
         <button class="ui primary button">TWITTER</button>
@@ -78,6 +88,18 @@ export default class CreateUser extends Component {
           </div>
 
           <div className="field">
+            {/* <label>Email: </label> */}
+            <input
+              type="email"
+              required
+              className="form-control"
+              placeholder="email"
+              value={this.state.email}
+              onChange={this.onChangeEmail}
+            />
+          </div>
+
+          <div className="field">
             {/* <label>Password: </label> */}
             <input
               type="password"
@@ -93,7 +115,7 @@ export default class CreateUser extends Component {
           </div> */}
 
 <button type="submit" class="ui primary button">
-            Signin
+            Sign Up
           </button>
 
         </form>
