@@ -7,10 +7,16 @@ const AllReports = () => {
             <div className='header'>
                 <h3 className='ui left floated header'>All incidents reports</h3>
                 <div className='ui right floated header'>
-                    <i aria-hidden='true' className='th icon' />
-                    <i aria-hidden='true' className='th list icon' />
                     <select>
                         <option value=''>Incident type</option>
+                        <option>Rape</option>
+                        <option>Assault</option>
+                        <option>Robbery</option>
+                        <option>Theft</option>
+                        <option>Flood</option>
+                        <option>Car Accident</option>
+                        <option>Vandalism</option>
+                        <option>Homicide</option>
                     </select>
                 </div>
             </div>
