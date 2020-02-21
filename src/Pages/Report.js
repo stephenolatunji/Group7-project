@@ -13,10 +13,16 @@ const Report = () => {
                     <div className='nine wide column'>
                         <div className='field'>
                             I am:
-                            <input type='radio' />
-                            <label>The Victim</label>
+                            
                             <div className='ui form' id='form-section'>
-                                <div className=' field'>
+
+                                <form inline>
+                                    <input type='radio' />
+                                    <label>The Victim</label>
+                                    <input type='radio' />
+                                    <label>Reporting on behalf of the victim</label>
+                                </form>
+                                <div className='field'>
                                     <label>FirstName</label>
                                     <input placeholder='First name' />
                                 </div>
@@ -37,8 +43,8 @@ const Report = () => {
                     </div>
                     <div className='four wide column'>
                         <div className='field'>
-                            <input type='radio' />
-                            <label>Reporting on behalf of the victim</label>
+                            {/* <input type='radio' />
+                            <label>Reporting on behalf of the victim</label> */}
                         </div>
                     </div>
                 </div>
@@ -65,16 +71,16 @@ const Report = () => {
                     <label>Where did it happen</label>
                     <input type='text'/>
                 </div>
-                <di>
+                <div>
                     <p>Attach Media</p>
                     <i aria-hidden='true' className='camera icon' />
                     <i aria-hidden='true' className='picture icon' />
                     <i aria-hidden='true' className='video icon' />
                     <i aria-hidden='true' className='microphone icon' />
-                </di>
+                </div>
                 <div className='required field'>
                     <label>What happened?</label>
-                    <textarea placeholder='Tell us something' row='5' />
+                    <textarea placeholder='Tell us something' rows='12' />
                 </div>
                 <div>
                     <button className='ui green inverted button'>Submit</button>

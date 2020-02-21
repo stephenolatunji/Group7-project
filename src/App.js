@@ -9,7 +9,7 @@ class App extends Component {
         return (
             <Router>
                 <Route exact path='/' component={LandingPage} />
-                <Route exact path='/userDashboard' component={UserDashboard} />
+                <Route path='/userdashboard' component={UserDashboard} />
             </Router>
         )
     }

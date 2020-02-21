@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 
@@ -6,13 +7,15 @@ const Dashboard = () => {
     return(
         <div className='container'>
             
-            <div className='ui segment' id='segment'>
+            <div className='ui segment' id='dashboard-segment'>
                 Welcome back Tolu you have a <a href='#'>New message</a>
             </div>
             <div className='ui grid'>
                 <div className='row'>
-                    <div className='twelve wide column' id='board'>
-                        <button className='ui primary button'>Create Accident Report</button>
+                    <div className='ten wide column' id='board'>
+                        <Link to={`/userdashboard/report`}>
+                            <button className='ui orange button'>Create Accident Report</button>
+                        </Link>
                         <table className='ui striped table'>
                             <thead class="">
                                 <tr class=""><th colspan="7" class="">Recent Reports</th></tr>
@@ -78,10 +81,10 @@ const Dashboard = () => {
                             </tbody>
                         </table>
                     </div>
-                    <div className='four wide column' id='card-container'>
+                    <div className='six wide column'>
                         <p><strong>Upcoming Events</strong></p>
                         <div>
-                            <div className='ui card' id='card'>
+                            <div className='ui card' id='events-card'>
                                 <div className='content'>
                                     <h4>First Aid & CPR</h4>
                                     lorem ipsum dolor
@@ -91,11 +94,11 @@ const Dashboard = () => {
                                     lorem ipsum dolor
                                 </div>
                                 <div className='content'>
-                                    <button className="ui blue basic button" >View More</button>
+                                    <button className="ui orange basic button">View More</button>
                                 </div>
                             </div>
                             <strong>Ongoing Campaign</strong>
-                            <div className='ui card' id='card'>
+                            <div className='ui card' id='events-card'>
                                 <div className='content'>
                                     <h4>Support an Accident</h4>
                                     lorem ipsum dolor
@@ -105,7 +108,7 @@ const Dashboard = () => {
                                     lorem ipsum dolor
                                 </div>
                                 <div className='content'>
-                                    <button className="ui blue basic button" >View More</button>
+                                    <button className="ui orange basic button" >View More</button>
                                 </div>
                             </div>
                         </div>

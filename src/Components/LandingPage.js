@@ -2,35 +2,25 @@ import React from 'react';
 import {Container, Button, Grid, Card, Divider, Form, Input} from 'semantic-ui-react';
 import User from '../Assets/Phone.jpeg';
 import HomeIcon from '@material-ui/icons/Home';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
-import AirlineSeatFlatAngledIcon from '@material-ui/icons/AirlineSeatFlatAngled';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import PhoneIcon from '@material-ui/icons/Phone';
-import Header from './Header'
-
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import Header from './Header';
+import { Link } from 'react-router-dom';
+import { Accident, Crime, BurningHome, FloodedHouse, Rape, Vandalism, Thief1, Log,  } from '../Assets/all-icons';
+import '../Pages/App.css'
 
 const LandingPage = () => {
     return(
         <div>
             <Header />
             <Container fluid style={{
-                marginTop: 90,
+                marginTop: 68,
                 textAlign: 'Center',
             }}>
-                <div>
-                    <ul style={{ display: 'flex', justifyContent: 'space-around', listStyle: 'none' }}>
-                        <li>Logo</li>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>History</li>
-                        <li>Mission</li>
-                        <li>Contact</li>
-                        <Button inverted color='brown'>Log In</Button>
-                        <Button color='blue'>Sign Up</Button>
-                    </ul>
-                </div>
+                
                 <Container fluid style={{
                     backgroundImage: `url(${User})`,
                     backgroundPosition: 'center',
@@ -41,43 +31,47 @@ const LandingPage = () => {
                     color: 'white'
                 }}>
                     <h3>Have you witnessed or been a victim of an accident? <br />Please report!</h3>
-                    <Button color='orange'>Report Incident</Button>
+                    <Link to='/userdashboard/report'><Button color='orange'>Report Incident</Button></Link>
                 </Container>
                 <h3>What you can report</h3>
-                <Grid column={4} centered
-                    style={{
-                        padding: 20,
-                        justifyContent: 'space-around'
-                    }}>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <HomeIcon />
-                        </Grid.Column>
-                        <Grid.Column>
-                            <WhatshotIcon />
-                        </Grid.Column>
-                        <Grid.Column>
-                            <AirlineSeatFlatAngledIcon />
-                        </Grid.Column>
-                        <Grid.Column>
-                            <HomeIcon />
-                        </Grid.Column>
-                    </Grid.Row>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <HomeIcon />
-                        </Grid.Column>
-                        <Grid.Column>
-                            <WhatshotIcon />
-                        </Grid.Column>
-                        <Grid.Column>
-                            <AirlineSeatFlatAngledIcon />
-                        </Grid.Column>
-                        <Grid.Column>
-                            <HomeIcon />
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
+                <div className='ui four column grid' id='icon-container'>
+                    <div className='row'>
+                        <div className='column'>
+                            <Accident className='icon1' />
+                            <p>Car Accidents</p>
+                        </div>
+                        <div className='column'>
+                            <BurningHome className='icon1' />
+                            <p>Fire Outbreaks</p>
+                        </div>
+                        <div className='column'>
+                            <FloodedHouse className='icon1'/>
+                            <p>Floods</p>
+                        </div>
+                        <div className='column'>
+                            <Crime className='icon1'/>
+                            <p>Homicides</p>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div className='column'>
+                            <Log className='icon1'/>
+                            <p>Assault</p>
+                        </div>
+                        <div className='column'>
+                            <Vandalism className='icon1'/>
+                            <p>Vandalism</p>
+                        </div>
+                        <div className='column'>
+                            <Thief1 className='icon1'/>
+                            <p>Theft</p>
+                        </div>
+                        <div className='column'>
+                            <Rape className='icon1'/>
+                            <p>Rape</p>
+                        </div>
+                    </div>
+                </div>
                 <Container fluid style={{
                     backgroundColor: '#eee',
                     padding: 20
@@ -91,7 +85,8 @@ const LandingPage = () => {
 
                         <Card
                             style={{
-                                padding: 50
+                                padding: 50,
+                                
                             }}
                         >
                             <h3>Report an Incident</h3>
@@ -117,7 +112,7 @@ const LandingPage = () => {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna
                                 aliqua. Ut enim ad minim veniam, quis
-                        </p>
+                            </p>
                         </Card>
                         <Card
                             style={{
@@ -132,7 +127,7 @@ const LandingPage = () => {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna
                                 aliqua. Ut enim ad minim veniam, quis
-                        </p>
+                            </p>
                         </Card>
                     </Card.Group>
                 </Container>
@@ -147,27 +142,27 @@ const LandingPage = () => {
                             padding: 20
                         }}>
                         <Card style={{
-                            backgroundColor: '#e70',
-                            padding: 8
+                            backgroundColor: '#c51',
+                            padding: 30
                         }}>
                             <p>More than</p>
-                            <h4>50,000</h4>
+                            <h2>50,000</h2>
                             <p>arrests made</p>
                         </Card>
                         <Card style={{
-                            backgroundColor: '#e70',
+                            backgroundColor: '#c51',
                             padding: 8
                         }}>
                             <p>On an average</p>
-                            <h4>5</h4>
+                            <h2>5</h2>
                             <p>people are arrested daily</p>
                         </Card>
                         <Card style={{
-                            backgroundColor: '#e70',
+                            backgroundColor: '#c51',
                             padding: 8
                         }}>
                             <p>Saved</p>
-                            <h4>1000+</h4>
+                            <h2>1000+</h2>
                             <p>lives and properties</p>
                         </Card>
                     </Card.Group>
@@ -187,24 +182,25 @@ const LandingPage = () => {
                         <Form.Field inline>
                             <label>Latest News</label>
                             <Input style={{ margin: '0 8px' }} />
-                            <Button color='blue'>Subscribe</Button>
+                            <Button color='orange'>Subscribe</Button>
                         </Form.Field>
                     </Form>
                 </Container>
                 <Container fluid style={{
-                    backgroundColor: '#06a',
+                    backgroundColor: '#444',
                     color: 'white',
-                    padding: 10
+                    padding: 10,
+                    textAlign: 'justify',
                 }}>
                     <Grid>
-                        <Grid.Row columns={4}>
+                        <Grid.Row columns={4} style={{margin: 10}}>
                             <Grid.Column>
                                 <h2>About Crest</h2>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                     sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            </p>
+                                </p>
                             </Grid.Column>
                             <Grid.Column>
                                 <h2>Useful Links</h2>
@@ -212,30 +208,35 @@ const LandingPage = () => {
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                     sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            </p>
+                                </p>
                             </Grid.Column>
                             <Grid.Column>
                                 <h2>Get in Touch</h2>
                                 <p>
                                     <LocationOnIcon />
-                                    <span>Lorem ipsum dolor</span>
+                                    <span>Lorem ipsum dolor minim veniam ipsum</span>
                                 </p>
                                 <p>
                                     <MailOutlineIcon />
-                                    <span>Lorem ipsum dolor</span>
+                                    <span>Lorem ipsum dolor minim veniam ipsum</span>
                                 </p>
                                 <p>
                                     <PhoneIcon />
                                     <span>+2347039635385</span>
                                 </p>
+                                <p>
+                                    <AccessTimeIcon />
+                                    <span>24 hrs ipsum dolor minim veniam ipsum </span>
+                                </p>
                             </Grid.Column>
                             <Grid.Column>
                                 <h2>Latest Tweets</h2>
                                 <TwitterIcon />
-                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                     sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            </span>
+                                </span>
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
