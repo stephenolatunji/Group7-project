@@ -8,7 +8,7 @@ const AllReports = () => {
                 <h3 className='ui left floated header'>All incidents reports</h3>
                 <div className='ui right floated header'>
                     <select>
-                        <option value=''>Incident type</option>
+                        <option>Incident type</option>
                         <option>Rape</option>
                         <option>Assault</option>
                         <option>Robbery</option>
@@ -22,14 +22,15 @@ const AllReports = () => {
             </div>
             <div className='all-reports-table'>
                 <table className='ui fixed single line striped table'>
-                    <thead class="">
-                        <tr class="">
+                    <thead>
+                        <tr>
                             <th>Complaint By</th>
                             <th>Incident Type</th>
                             <th>Case ID</th>
                             <th>Date</th>
                             <th>Time</th>
                             <th>Status</th>
+                            <th>Location</th>
                             <th>Description</th>
                         </tr>
                     </thead>
@@ -42,17 +43,6 @@ const AllReports = () => {
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>
-                                <i aria-hidden="true" className="trash icon"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
                             <td></td>
                             <td>
                                 <i aria-hidden="true" className="trash icon"></i>
@@ -66,6 +56,20 @@ const AllReports = () => {
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
+                            <td>
+                                <i aria-hidden="true" className="trash icon"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td>
                                 <i aria-hidden="true" className="trash icon"></i>
                             </td>
@@ -78,11 +82,13 @@ const AllReports = () => {
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                             <td>
                                 <i aria-hidden="true" className="trash icon"></i>
                             </td>
                         </tr>
                         <tr>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>

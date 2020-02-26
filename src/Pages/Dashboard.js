@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 
 
 const Dashboard = () => {
+
+    const [exerciseList, setExerciseList] = useState([]);
+    
+    useEffect(
+        () =>{
+            try{
+                fetch('https://still-brook-60182.herokuapp.com/exercise')
+                .then(res => res.json())
+                .then(data => setExerciseList(data.body))
+            }catch(error){
+                console.error(error);
+            };
+        }
+    );
+
     return(
         <div className='container'>
             
@@ -17,33 +32,40 @@ const Dashboard = () => {
                             <button className='ui orange button'>Create Accident Report</button>
                         </Link>
                         <table className='ui striped table'>
-                            <thead class="">
-                                <tr class=""><th colspan="7" class="">Recent Reports</th></tr>
+                            <thead >
+                                <tr>
+                                    <th></th>
+                                    <th>Case ID</th>
+                                    <th>Incident Type</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                    <th>Location</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>#</td>
-                                    <td>Case ID</td>
-                                    <td>Incident Type</td>
-                                    <td>Date</td>
-                                    <td>Time</td>
-                                    <td>Status</td>
-                                    <td>Description</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <i aria-hidden="true" className="trash icon"></i>
-                                    </td>
-                                </tr>
+                                {exerciseList.slice(0, 5).map((exercise, i) => {
+                                    return(
+                                        <tr key={i} >
+                                            <td>1</td>
+                                            <td>{exercise.caseid}</td>
+                                            <td>{exercise.incident}</td>
+                                            <td>{exercise.date}</td>
+                                            <td>{exercise.time}</td>
+                                            <td>{exercise.status}</td>
+                                            <td>{exercise.location}</td>
+                                            <td>{exercise.description}</td>
+                                            <td>
+                                                <i aria-hidden="true" className="trash icon"></i>
+                                            </td>
+                                        </tr>
+                                    )
+                                })}
+                                
                                 <tr>
                                     <td>2</td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -62,12 +84,14 @@ const Dashboard = () => {
                                     <td></td>
                                     <td></td>
                                     <td></td>
+                                    <td></td>
                                     <td>
                                         <i aria-hidden="true" className="trash icon"></i>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>

@@ -21,8 +21,8 @@ const Header = () => {
                         <ul>
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/userdashboard'>Dashboard</Link></li>
-                            <li><Link to='/sign up' role='button' className='sign-button'>Sign Up</Link></li>
-                            <li><Link to='/sign In' role='button' className='sign-button'>Sign In</Link></li>
+                            <li><Link to='/signup' role='button' className='sign-button'>Sign Up</Link></li>
+                            <li><Link to='/signin' role='button' className='sign-button'>Sign In</Link></li>
                         </ul>
                     </div>
                 </nav>
