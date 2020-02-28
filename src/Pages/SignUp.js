@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Components/Header';
 import './App.css';
+import axios from "axios"
 
 
 const SignUp = () => {
@@ -21,14 +22,20 @@ const SignUp = () => {
             password: password
         };
         console.log(user);
+
         
         try{
-            fetch('https://still-brook-60182.herokuapp.com/users/add', {
+            fetch(
+                // 'http://localhost:5000/users/add'
+                 'https://still-brook-60182.herokuapp.com/users/add'
+                , {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'},
-                body: JSON.stringify({username: username, email: email, password: password})
+                body: JSON.stringify({username:username, 
+                email: email, 
+                password: password})
             })
                 .then(res => res.json())
                 .then(data => {
@@ -36,11 +43,12 @@ const SignUp = () => {
                     console.log(data);
                 })
 
-        }catch(error){
+    }catch(error){
             console.error(error);
         }
-
     }
+
+    
 
     return (
         <>
