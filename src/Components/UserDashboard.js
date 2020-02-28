@@ -6,6 +6,7 @@ import AllReports from '../Pages/AllReports';
 import Header from './Header';
 import Message from '../Pages/Message';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import UserProfile from '../Pages/UserProfile';
 
 class UserDashboard extends Component{
 
@@ -14,33 +15,33 @@ class UserDashboard extends Component{
             <div>
                 <Header />
                 <div className='ui fluid container' id='user-page'>
-                    <div className="ui segment pushable">
-                        <div className="ui inverted vertical labeled icon ui overlay left thin visible sidebar menu">
+                    <div className='ui segment pushable'>
+                        <div className='ui inverted vertical labeled icon ui overlay left thin visible sidebar menu'>
                             <h4>Tolu Adams</h4>
-                            <button className="ui yellow basic button">Edit Profile</button>
-                            <Link to={`/userdashboard/`} class="item">
+                            <Link to='/userdashboard/userprofile'><button className="ui yellow basic button">Edit Profile</button></Link>
+                            <Link to='/userdashboard/' className='item'>
                                 <i aria-hidden="true" className="dashboard icon" />
                                 Dashboard
                             </Link>
-                            <Link to={`/userdashboard/report`} class="item">
-                                <i aria-hidden="true" className="file alternate icon" />
+                            <Link to='/userdashboard/report' className='item'>
+                                <i aria-hidden='true' className='file alternate icon' />
                                 Report
                             </Link>
-                            <Link to='/userdashboard/allreports' class="item">
-                                <i aria-hidden="true" className="file alternate icon" />
+                            <Link to='/userdashboard/allreports' className='item' >
+                                <i aria-hidden='true' className='file alternate icon' />
                                 Report History
                             </Link>
-                            <Link to={`/userdashboard/message`} class="item">
-                                <i aria-hidden="true" className="envelope square icon" />
+                            <Link to='/userdashboard/message' className='item'>
+                                <i aria-hidden='true' className='envelope square icon' />
                                 Message
                             </Link>
-                            <Link to={`/help`} class="item">
-                                <i aria-hidden="true" className="help icon" />
+                            <Link to={`/help`} className='item'>
+                                <i aria-hidden='true' className='help icon' />
                                 Help
                             </Link>
                         </div>
-                        <div class="pusher">
-                            <div class="ui basic segment" id='dashboard'>
+                        <div className='pusher'>
+                            <div className='ui basic segment' id='dashboard'>
                                 <div className='ui secondary menu' id='menu-bar'>
                                     <i aria-hidden='true' className='hospital icon' />
                                     <div className='right menu'>
@@ -50,7 +51,9 @@ class UserDashboard extends Component{
                                     </div>
                                 </div>
                                 <Router>
+                                    
                                     <Route exact path={`/userdashboard/`} component={Dashboard} />
+                                    <Route path={`/userdashboard/userprofile`} component={UserProfile} />
                                     <Route path={`/userdashboard/report`} component={Report} />
                                     <Route path={`/userdashboard/allreports`} component={AllReports} />
                                     <Route path={`/userdashboard/message`} component={Message}/>

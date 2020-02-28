@@ -1,15 +1,9 @@
 import React from 'react';
-import {Container, Button, Grid, Card, Divider, Form, Input} from 'semantic-ui-react';
+import {Container, Button, Grid, Card, Divider, Form, Input } from 'semantic-ui-react';
 import User from '../Assets/Phone.jpeg';
-import HomeIcon from '@material-ui/icons/Home';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import PhoneIcon from '@material-ui/icons/Phone';
-import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import Header from './Header';
 import { Link } from 'react-router-dom';
-import { Accident, Crime, BurningHome, FloodedHouse, Rape, Vandalism, Thief1, Log,  } from '../Assets/all-icons';
+import { Accident, Crime, BurningHome, FloodedHouse, Rape, Vandalism, Thief1, Log, Crest } from '../Assets/all-icons';
 import '../Pages/App.css'
 
 const LandingPage = () => {
@@ -168,7 +162,6 @@ const LandingPage = () => {
                     </Card.Group>
                     <Divider />
                     <h2><strong>What our users are saying</strong></h2>
-
                 </Container>
                 <Container fluid
                     style={{
@@ -177,7 +170,8 @@ const LandingPage = () => {
                         display: 'flex',
                         justifyContent: 'space-between'
                     }}>
-                    <HomeIcon />
+                    <Crest style={{ width: '20px', height: '20px', fill: '#c51'}}/>
+                
                     <Form>
                         <Form.Field inline>
                             <label>Latest News</label>
@@ -193,7 +187,7 @@ const LandingPage = () => {
                     textAlign: 'justify',
                 }}>
                     <Grid>
-                        <Grid.Row columns={4} style={{margin: 10}}>
+                        <Grid.Row columns={4} style={{margin: 10}} stackable>
                             <Grid.Column>
                                 <h2>About Crest</h2>
                                 <p>
@@ -213,30 +207,33 @@ const LandingPage = () => {
                             <Grid.Column>
                                 <h2>Get in Touch</h2>
                                 <p>
-                                    <LocationOnIcon />
+                                    <i aria-hidden='true' className='map marker alternate link icon' />
                                     <span>Lorem ipsum dolor minim veniam ipsum</span>
                                 </p>
                                 <p>
-                                    <MailOutlineIcon />
+                                    <i aria-hidden='true' className='mail outlined link icon' />
                                     <span>Lorem ipsum dolor minim veniam ipsum</span>
                                 </p>
                                 <p>
-                                    <PhoneIcon />
+                                    <i aria-hidden='true' className='phone link icon' />
                                     <span>+2347039635385</span>
                                 </p>
                                 <p>
-                                    <AccessTimeIcon />
+                                    <i aria-hidden='true' className='clock link icon' />
                                     <span>24 hrs ipsum dolor minim veniam ipsum </span>
                                 </p>
                             </Grid.Column>
                             <Grid.Column>
                                 <h2>Latest Tweets</h2>
-                                <TwitterIcon />
-                                <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                <p>
+                                    <i aria-hidden='true' className='twitter icon' />
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                                 </span>
+                                </p>
+                                
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
