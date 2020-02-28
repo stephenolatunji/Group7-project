@@ -16,7 +16,7 @@ const Header = () => {
                 }}>
                 <nav>
                     <div className='nav'>
-                        <Crest fill='white' height='40px' width='40px' />
+                        <Crest fill='#c51' height='30px' width='30px' />
                             CREST
                         <ul>
                             <li><Link to='/'>Home</Link></li>

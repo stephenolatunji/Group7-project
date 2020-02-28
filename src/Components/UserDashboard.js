@@ -15,33 +15,33 @@ class UserDashboard extends Component{
             <div>
                 <Header />
                 <div className='ui fluid container' id='user-page'>
-                    <div className="ui segment pushable">
-                        <div className="ui inverted vertical labeled icon ui overlay left thin visible sidebar menu">
+                    <div className='ui segment pushable'>
+                        <div className='ui inverted vertical labeled icon ui overlay left thin visible sidebar menu'>
                             <h4>Tolu Adams</h4>
-                            <Link to={`/userdashboard/userprofile`}><button className="ui yellow basic button">Edit Profile</button></Link>
-                            <Link to={`/userdashboard/`} className="item">
+                            <Link to='/userdashboard/userprofile'><button className="ui yellow basic button">Edit Profile</button></Link>
+                            <Link to='/userdashboard/' className='item'>
                                 <i aria-hidden="true" className="dashboard icon" />
                                 Dashboard
                             </Link>
-                            <Link to={`/userdashboard/report`} className="item">
-                                <i aria-hidden="true" className="file alternate icon" />
+                            <Link to='/userdashboard/report' className='item'>
+                                <i aria-hidden='true' className='file alternate icon' />
                                 Report
                             </Link>
-                            <Link to='/userdashboard/allreports' className="item">
-                                <i aria-hidden="true" className="file alternate icon" />
+                            <Link to='/userdashboard/allreports' className='item' >
+                                <i aria-hidden='true' className='file alternate icon' />
                                 Report History
                             </Link>
-                            <Link to={`/userdashboard/message`} className="item">
-                                <i aria-hidden="true" className="envelope square icon" />
+                            <Link to='/userdashboard/message' className='item'>
+                                <i aria-hidden='true' className='envelope square icon' />
                                 Message
                             </Link>
-                            <Link to={`/help`} className="item">
-                                <i aria-hidden="true" className="help icon" />
+                            <Link to={`/help`} className='item'>
+                                <i aria-hidden='true' className='help icon' />
                                 Help
                             </Link>
                         </div>
-                        <div className="pusher">
-                            <div className="ui basic segment" id='dashboard'>
+                        <div className='pusher'>
+                            <div className='ui basic segment' id='dashboard'>
                                 <div className='ui secondary menu' id='menu-bar'>
                                     <i aria-hidden='true' className='hospital icon' />
                                     <div className='right menu'>

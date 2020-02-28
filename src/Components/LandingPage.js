@@ -3,7 +3,7 @@ import {Container, Button, Grid, Card, Divider, Form, Input } from 'semantic-ui-
 import User from '../Assets/Phone.jpeg';
 import Header from './Header';
 import { Link } from 'react-router-dom';
-import { Accident, Crime, BurningHome, FloodedHouse, Rape, Vandalism, Thief1, Log } from '../Assets/all-icons';
+import { Accident, Crime, BurningHome, FloodedHouse, Rape, Vandalism, Thief1, Log, Crest } from '../Assets/all-icons';
 import '../Pages/App.css'
 
 const LandingPage = () => {
@@ -170,7 +170,8 @@ const LandingPage = () => {
                         display: 'flex',
                         justifyContent: 'space-between'
                     }}>
-                    <i aria-hidden='true' className='home link icon'/>
+                    <Crest style={{ width: '20px', height: '20px', fill: '#c51'}}/>
+                
                     <Form>
                         <Form.Field inline>
                             <label>Latest News</label>
@@ -186,7 +187,7 @@ const LandingPage = () => {
                     textAlign: 'justify',
                 }}>
                     <Grid>
-                        <Grid.Row columns={4} style={{margin: 10}}>
+                        <Grid.Row columns={4} style={{margin: 10}} stackable>
                             <Grid.Column>
                                 <h2>About Crest</h2>
                                 <p>
@@ -225,7 +226,7 @@ const LandingPage = () => {
                             <Grid.Column>
                                 <h2>Latest Tweets</h2>
                                 <p>
-                                    <i aria-hidden='true' className='twitter square icon' />
+                                    <i aria-hidden='true' className='twitter icon' />
                                     <span>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                         sed do eiusmod tempor incididunt ut

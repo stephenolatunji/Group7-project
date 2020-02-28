@@ -10,9 +10,13 @@ const Dashboard = () => {
     useEffect(
         () =>{
             try{
-                fetch('https://still-brook-60182.herokuapp.com/exercise')
+                fetch('https://still-brook-60182.herokuapp.com/exercises')
                 .then(res => res.json())
-                .then(data => setExerciseList(data.body))
+                .then(data => {
+                    console.log(data);
+                    
+                    setExerciseList(data.body)
+                    })
             }catch(error){
                 console.error(error);
             };

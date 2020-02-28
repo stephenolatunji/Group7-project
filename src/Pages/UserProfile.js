@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 
 const UserProfile = () => {
+    const [userName, setUserName] = useState('')
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -12,6 +13,7 @@ const UserProfile = () => {
         e.preventDefault();
 
         const profile = {
+            userName: userName,
             firstName: firstName,
             lastName: lastName,
             phoneNumber: phoneNumber,
@@ -32,6 +34,11 @@ const UserProfile = () => {
                         email: email
                     })
             })
+                .then(res => res.json())
+                .then(data => {
+                
+                    console.log('profile added')
+                })
         } catch (error) {
             console.error(error)
         };
@@ -48,6 +55,10 @@ const UserProfile = () => {
                 <div className='nine wide column'>
                     <form onSubmit={submitHandler}>
                         <div className='ui form' id='form-section'>
+                            <div className='field'>
+                                <label>UserName</label>
+                                <input placeholder='UserName name' name='firstName' type='text' onChange={e => setUserName(e.target.value)} />
+                            </div>
                             <div className='field'>
                                 <label>FirstName</label>
                                 <input placeholder='First name' name='firstName' type='text' onChange={e => setFirstName(e.target.value)} />
